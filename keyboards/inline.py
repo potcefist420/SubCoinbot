@@ -19,7 +19,7 @@ class ProfileMenu(object):
 	
       def profile_deposit(self):
          keyboard = InlineKeyboardMarkup()
-         k1 = InlineKeyboardButton(text = '🥝Qiwi / 💳Карта', callback_data = 'qiwi_method')
+         k1 = InlineKeyboardButton(text = '💳Карта', callback_data = 'qiwi_method')
          k2 = InlineKeyboardButton(text = '🙎‍♂️ Через поддержку', callback_data = 'manual_dep')
          keyboard.add(k1)
          if manualdep:
