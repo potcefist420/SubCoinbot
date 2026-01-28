@@ -5,10 +5,10 @@ from loader import dp, bot
 from filters import IsPrivate, IsBan, IsUsr
 from utils.messages import info, statistikamsg
 from utils.sqlite import statistika
-from data.config import chatbot, pays  # твои ссылки
+from data.config import admin, pays  # админ и выплаты
 
 # ----------------------------------------
-# Кастомное меню, которое можно редактировать
+# Кастомное меню
 # ----------------------------------------
 class InfoMenuCustom:
     def info_main(self):
@@ -17,15 +17,15 @@ class InfoMenuCustom:
         # Статистика
         keyboard.add(types.InlineKeyboardButton(text='📊 Статистика', callback_data='statistika'))
         
-        # Чат и выплаты
+        # Канал и выплаты
         keyboard.add(
-            types.InlineKeyboardButton(text='❤️ Канал', url=f'https://t.me/subcoinnnews'),
+            types.InlineKeyboardButton(text='🗞 Канал', url='https://t.me/subcoinnnews'),
             types.InlineKeyboardButton(text='💸 Выплаты', url=f'https://t.me/{pays}')
         )
 
-        # Пример одной кнопки вместо владельца/разработчика
+        # Админ
         keyboard.add(
-            types.InlineKeyboardButton(text='📩 Контакты', url=f'https://t.me/{admin}')  # можно заменить на admin
+            types.InlineKeyboardButton(text='👤 Админ', url=f'https://t.me/{admin}')
         )
 
         return keyboard
