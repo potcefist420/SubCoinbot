@@ -19,13 +19,13 @@ class InfoMenuCustom:
         
         # Чат и выплаты
         keyboard.add(
-            types.InlineKeyboardButton(text='❤️ Чат', url=f'https://t.me/{chatbot}'),
+            types.InlineKeyboardButton(text='❤️ Канал', url=f'https://t.me/subcoinnnews'),
             types.InlineKeyboardButton(text='💸 Выплаты', url=f'https://t.me/{pays}')
         )
 
         # Пример одной кнопки вместо владельца/разработчика
         keyboard.add(
-            types.InlineKeyboardButton(text='📩 Контакты', url=f'https://t.me/{chatbot}')  # можно заменить на admin
+            types.InlineKeyboardButton(text='📩 Контакты', url=f'https://t.me/{admin}')  # можно заменить на admin
         )
 
         return keyboard
